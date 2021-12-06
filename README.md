@@ -1,18 +1,8 @@
 # 📌 Contents
 
 - [📌 Contents](#-contents)
-- [:camera: Screenshots](#camera-screenshots)
 - [:rocket: Technologies](#rocket-technologies)
 - [:computer: How to run](#computer-how-to-run)
-
-# :camera: Screenshots
-<div align="center">
-   <img src="./.github/screen1.png" width="400px">
-   <img src="./.github/screen2.png" width="400px">
-   <img src="./.github/screen3.png" width="400px">
-   <img src="./.github/screen4.png" width="400px">
-   <img src="./.github/screen5.png" width="400px">
-</div>
 
 # :rocket: Technologies
 This project was made using the follow technologies:
