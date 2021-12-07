@@ -1,6 +1,12 @@
+// chakra
 import { Flex, Text, Input, Icon } from "@chakra-ui/react";
+
+// icons
 import { RiSearchLine } from 'react-icons/ri'
 
+//--------------------------
+// Export
+//--------------------------
 const Header: React.FC = () => {
   return (
     <Flex

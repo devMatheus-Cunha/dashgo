@@ -1,4 +1,6 @@
 import React from "react";
+
+// chakra
 import {
   FormControl,
   FormLabel,
@@ -6,11 +8,12 @@ import {
   InputProps as ChakraInputProps,
 } from "@chakra-ui/react";
 
+
+// interface
 interface IInputProps extends ChakraInputProps{
   name: string;
   label?: string;
 }
-
 
 //--------------------------
 // Export

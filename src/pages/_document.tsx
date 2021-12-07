@@ -1,5 +1,9 @@
+// next
 import Document, { Html, Head, NextScript, Main } from "next/document";
 
+//--------------------------
+// Export
+//--------------------------
 export default class MyDocument extends Document {
   render() {
     return (

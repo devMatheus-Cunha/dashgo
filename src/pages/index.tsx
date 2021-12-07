@@ -4,6 +4,9 @@ import { Flex, Button, Stack } from "@chakra-ui/react";
 // components
 import { Input } from "../components/Form/Input";
 
+//--------------------------
+// Export
+//--------------------------
 export default function Home() {
   return (
     <Flex w="100vw" h="100vh" align="center" justify="center">
