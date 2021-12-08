@@ -5,71 +5,20 @@ import dynamic from "next/dynamic";
 
 // chakra
 import {
-	Flex, SimpleGrid, Box, Text, theme,
+	Flex, SimpleGrid, Box, Text,
 } from "@chakra-ui/react";
 
 // components
 import { Header } from "../components/Header";
 import { Sidebar } from "../components/Sidebar";
 
+// utils
+import { options, series } from "../utils/ApexCharts";
+
 // apex //! for the import loading to happen only in the browser and not in the next node layer
 const Chart = dynamic(() => import("react-apexcharts"), {
 	ssr: false,
 })
-
-// variants
-const options = {
-	chart: {
-		toolbar: {
-			show: false,
-		},
-		zoom: {
-			enabled: false,
-		},
-		foreColor: theme.colors.gray[500],
-	},
-	grid: {
-		show: false,
-	},
-	dataLabels: {
-		enabled: false,
-	},
-	toltip: {
-		enabled: false,
-	},
-	xaxis: {
-		type: "datetime",
-		axisBorder: {
-			color: theme.colors.gray[600],
-		},
-		axisTicks: {
-			color: theme.colors.gray[600],
-		},
-		categories: [
-			"2021-03-18T00:00:00.000Z",
-			"2021-03-19T00:00:00.000Z",
-			"2021-03-20T00:00:00.000Z",
-			"2021-03-21T00:00:00.000Z",
-			"2021-03-22T00:00:00.000Z",
-			"2021-03-23T00:00:00.000Z",
-			"2021-03-24T00:00:00.000Z",
-		],
-
-	},
-	fill: {
-		opacity: 0.3,
-		type: "gradient",
-		gradient: {
-			shade: "dark",
-			opacityFrom: 0.7,
-			opacityTo: 0.3,
-		},
-	},
-}
-
-const series = [
-	{ name: "series1", data: [4, 120, 10, 28, 61, 18, 109] },
-]
 
 //--------------------------
 // Export
