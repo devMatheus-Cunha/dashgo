@@ -1,6 +1,11 @@
-import { Box, Button, Stack } from "@chakra-ui/react";
 import React from "react";
 
+// chakra
+import { Box, Button, Stack } from "@chakra-ui/react";
+
+//--------------------------
+// Export
+//--------------------------
 export const Pagination: React.FC = () => {
 	return (
 		<Stack
