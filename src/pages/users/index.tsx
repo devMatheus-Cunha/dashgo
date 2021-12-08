@@ -36,7 +36,6 @@ const UserList: React.FC = () => {
 					<Flex mb="8" justify="space-between" align="center">
 						<Heading size="lg" fontWeight="normal">
 							Lista de Usuários
-							{" "}
 						</Heading>
 						<Button
 							as="a"
@@ -44,6 +43,7 @@ const UserList: React.FC = () => {
 							fontSize="sm"
 							colorScheme="pink"
 							leftIcon={<Icon as={RiAddLine} fontSize="20" />}
+							href="/users/create"
 						>
 							Criar novo
 						</Button>
@@ -69,12 +69,12 @@ const UserList: React.FC = () => {
 								<Td>
 									<Box>
 										<Text fontweight="bold">Matheus Cunha</Text>
-										<Text fontSize="sm" color="gray.300">devmatheusgr@gmail.com</Text>
+										<Text fontSize="sm" color="gray.300">
+											devmatheusgr@gmail.com
+										</Text>
 									</Box>
 								</Td>
-								<Td>
-									19 Março, 2021
-								</Td>
+								<Td>19 Março, 2021</Td>
 								<Td>
 									<Button
 										as="a"
