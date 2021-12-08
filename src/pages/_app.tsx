@@ -10,11 +10,11 @@ import { theme } from "../styles/theme";
 // Export
 //--------------------------
 function MyApp({ Component, pageProps }: AppProps) {
-  return (
-    <ChakraProvider theme={theme}>
-      <Component {...pageProps} />
-    </ChakraProvider>
-  );
+	return (
+		<ChakraProvider theme={theme}>
+			<Component {...pageProps} />
+		</ChakraProvider>
+	);
 }
 
 export default MyApp;
