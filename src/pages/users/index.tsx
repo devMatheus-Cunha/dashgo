@@ -23,6 +23,7 @@ import { RiAddLine, RiPencilLine } from "react-icons/ri";
 // components
 import { Header } from "../../components/Header";
 import { Sidebar } from "../../components/Sidebar";
+import { Pagination } from "../../components/Pagination";
 
 const UserList: React.FC = () => {
 	return (
@@ -88,6 +89,7 @@ const UserList: React.FC = () => {
 							</Tr>
 						</Tbody>
 					</Table>
+					<Pagination />
 				</Box>
 			</Flex>
 		</Box>
