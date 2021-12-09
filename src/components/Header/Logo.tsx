@@ -1,9 +1,20 @@
 import React from "react";
 
-const Logo: React.FC = () => {
-	return (
-		<h1>s</h1>
-	);
-}
+// chakra
+import { Text } from "@chakra-ui/react";
 
-export default Logo;
+export const Logo: React.FC = () => {
+	return (
+		<Text
+			fontSize={["2xl", "3xl"]}
+			fontWeight="bold"
+			letterSpacing="tight"
+			w="64"
+		>
+			Dashgo
+			<Text as="span" ml="1" color="pink.500">
+				.
+			</Text>
+		</Text>
+	);
+};
