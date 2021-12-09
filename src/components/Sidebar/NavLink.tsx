@@ -4,9 +4,9 @@ import {
 } from "@chakra-ui/react";
 import { RiDashboardLine } from "react-icons/ri";
 
-export const NavLink: React.FC<any> = ({ children, icon }: any) => {
+export const NavLink: React.FC<any> = ({ children, icon, href }: any) => {
 	return (
-		<Link display="flex" aling="center" href="/dashboard">
+		<Link display="flex" aling="center" href={href}>
 			<Icon as={icon} fontSize="20" />
 			<Text ml="4" fontWeight="medium">
 				{children}
