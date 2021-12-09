@@ -5,6 +5,9 @@ import {
 	Flex, Text, Box, Avatar,
 } from "@chakra-ui/react";
 
+//--------------------------
+// Export
+//--------------------------
 export const Profile: React.FC = () => {
 	return (
 		<Flex align="center">

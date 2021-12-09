@@ -3,6 +3,9 @@ import React from "react";
 // chakra
 import { Text } from "@chakra-ui/react";
 
+//--------------------------
+// Export
+//--------------------------
 export const Logo: React.FC = () => {
 	return (
 		<Text

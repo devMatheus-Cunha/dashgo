@@ -6,6 +6,9 @@ import { Flex, Input, Icon } from "@chakra-ui/react";
 // icons
 import { RiSearchLine } from "react-icons/ri";
 
+//--------------------------
+// Export
+//--------------------------
 export const SearchBox: React.FC = () => {
 	return (
 		<Flex

@@ -6,6 +6,9 @@ import { Flex, HStack, Icon } from "@chakra-ui/react";
 // icons
 import { RiNotificationLine, RiUserAddLine } from "react-icons/ri";
 
+//--------------------------
+// Export
+//--------------------------
 export const NotificationNav: React.FC = () => {
 	return (
 		<Flex align="center" ml="auto">
