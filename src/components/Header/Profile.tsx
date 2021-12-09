@@ -1,9 +1,25 @@
 import React from "react";
 
-const Profile: React.FC = () => {
+// chakra
+import {
+	Flex, Text, Box, Avatar,
+} from "@chakra-ui/react";
+
+export const Profile: React.FC = () => {
 	return (
-		<h1>s</h1>
+		<Flex align="center">
+			<Box mr="4" textAlign="right">
+				<Text>Matheus Cunha</Text>
+				<Text color="gray.300" fontSize="small">
+					devmatheusgr@gmail.com
+				</Text>
+			</Box>
+
+			<Avatar
+				size="md"
+				name="Matheus Cunha"
+				src="https://github.com/devMatheus-Cunha.png"
+			/>
+		</Flex>
 	);
 }
-
-export default Profile;
