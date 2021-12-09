@@ -1,13 +1,11 @@
 import React from "react";
+
 // chakra
+import { Box, Stack, Text } from "@chakra-ui/react";
 
-import {
-	Box, Stack, Text, Link, Icon,
-} from "@chakra-ui/react";
-
-// icons
-import { RiDashboardLine, RiContactsLine } from "react-icons/ri";
-
+//--------------------------
+// Export
+//--------------------------
 export const NavSection: React.FC<any> = ({ title, children }) => {
 	return (
 		<Box>

@@ -1,8 +1,8 @@
 import React from "react";
 
 // chakra
-import { Box, Button, Stack } from "@chakra-ui/react";
-import PaginationItem from "./PaginationItem";
+import { Box, Stack } from "@chakra-ui/react";
+import { PaginationItem } from "./PaginationItem";
 
 //--------------------------
 // Export

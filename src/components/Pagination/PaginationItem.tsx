@@ -1,7 +1,12 @@
-import { Button } from "@chakra-ui/react";
 import React from "react";
 
-const PaginationItem: React.FC<any> = ({ isCurrent = false, number }: any) => {
+// chakra
+import { Button } from "@chakra-ui/react";
+
+//--------------------------
+// Export
+//--------------------------
+export const PaginationItem: React.FC<any> = ({ isCurrent = false, number }: any) => {
 	if (isCurrent) {
 		return (
 			<Button
@@ -28,5 +33,3 @@ const PaginationItem: React.FC<any> = ({ isCurrent = false, number }: any) => {
 		</Button>
 	);
 };
-
-export default PaginationItem;

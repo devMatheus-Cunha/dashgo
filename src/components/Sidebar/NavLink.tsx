@@ -1,9 +1,11 @@
 // chakra
 import {
-	Box, Stack, Text, Link, Icon,
+	Text, Link, Icon,
 } from "@chakra-ui/react";
-import { RiDashboardLine } from "react-icons/ri";
 
+//--------------------------
+// Export
+//--------------------------
 export const NavLink: React.FC<any> = ({ children, icon, href }: any) => {
 	return (
 		<Link display="flex" aling="center" href={href}>
