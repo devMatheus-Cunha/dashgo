@@ -8,7 +8,7 @@ import {
 //--------------------------
 // Export
 //--------------------------
-export const Profile: React.FC = () => {
+export const Profile = () => {
 	return (
 		<Flex align="center">
 			<Box mr="4" textAlign="right">

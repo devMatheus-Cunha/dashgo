@@ -12,7 +12,7 @@ interface IPaginationItemProps {
 //--------------------------
 // Export
 //--------------------------
-export const PaginationItem: React.FC<any> = ({
+export const PaginationItem = ({
 	isCurrent = false,
 	numberPage,
 }: IPaginationItemProps) => {

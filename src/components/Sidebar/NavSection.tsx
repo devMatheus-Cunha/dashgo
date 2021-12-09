@@ -12,7 +12,7 @@ interface INavSectionProps {
 //--------------------------
 // Export
 //--------------------------
-export const NavSection: React.FC<any> = ({ title, children }: INavSectionProps) => {
+export const NavSection = ({ title, children }: INavSectionProps) => {
 	return (
 		<Box>
 			<Text fontWeight="bold" color="gray.400" fontSize="small">

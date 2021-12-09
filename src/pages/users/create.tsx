@@ -20,7 +20,7 @@ import { Input } from "../../components/Form/Input";
 //--------------------------
 // Export
 //--------------------------
-const CreateUser: React.FC = () => {
+const CreateUser = () => {
 	return (
 		<Box>
 			<Header />

@@ -9,7 +9,7 @@ import { RiNotificationLine, RiUserAddLine } from "react-icons/ri";
 //--------------------------
 // Export
 //--------------------------
-export const NotificationNav: React.FC = () => {
+export const NotificationNav = () => {
 	return (
 		<Flex align="center" ml="auto">
 			<HStack

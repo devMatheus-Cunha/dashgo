@@ -28,7 +28,7 @@ import { Pagination } from "../../components/Pagination";
 //--------------------------
 // Export
 //--------------------------
-const UserList: React.FC = () => {
+const UserList = () => {
 	return (
 		<Box>
 			<Header />

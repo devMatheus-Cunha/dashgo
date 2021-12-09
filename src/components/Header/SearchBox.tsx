@@ -9,7 +9,7 @@ import { RiSearchLine } from "react-icons/ri";
 //--------------------------
 // Export
 //--------------------------
-export const SearchBox: React.FC = () => {
+export const SearchBox = () => {
 	return (
 		<Flex
 			as="label"

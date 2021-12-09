@@ -7,7 +7,7 @@ import { PaginationItem } from "./PaginationItem";
 //--------------------------
 // Export
 //--------------------------
-export const Pagination: React.FC = () => {
+export const Pagination = () => {
 	return (
 		<Stack
 			direction="row"
@@ -28,10 +28,10 @@ export const Pagination: React.FC = () => {
 				<strong>100</strong>
 			</Box>
 			<Stack direction="row" spacing="2">
-				<PaginationItem number={1} isCurrent />
-				<PaginationItem number={2} />
-				<PaginationItem number={3} />
-				<PaginationItem number={4} />
+				<PaginationItem numberPage={1} isCurrent />
+				<PaginationItem numberPage={2} />
+				<PaginationItem numberPage={3} />
+				<PaginationItem numberPage={4} />
 			</Stack>
 		</Stack>
 	);

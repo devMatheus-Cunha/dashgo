@@ -14,7 +14,7 @@ import { Logo } from "./Logo";
 //--------------------------
 // Export
 //--------------------------
-export const Header: React.FC = () => {
+export const Header = () => {
 	return (
 		<Flex
 			as="header"

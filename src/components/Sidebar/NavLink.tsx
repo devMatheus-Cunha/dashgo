@@ -15,7 +15,7 @@ interface INavLinkProps extends ChakraLinkProps {
 //--------------------------
 // Export
 //--------------------------
-export const NavLink: React.FC<any> = ({ children, icon, href }: INavLinkProps) => {
+export const NavLink = ({ children, icon, href }: INavLinkProps) => {
 	return (
 		<ChakraLink display="flex" aling="center" href={href}>
 			<Icon as={icon} fontSize="20" />

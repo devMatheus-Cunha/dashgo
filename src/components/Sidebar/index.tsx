@@ -12,13 +12,15 @@ import {
 	RiGitMergeLine,
 	RiInputMethodLine,
 } from "react-icons/ri";
+
+// components
 import { NavSection } from "./NavSection";
 import { NavLink } from "./NavLink";
 
 //--------------------------
 // Export
 //--------------------------
-export const Sidebar: React.FC = () => {
+export const Sidebar = () => {
 	return (
 		<Box as="aside" w="64" mr="8">
 			<Stack spacing="12" aling="flex-start">
