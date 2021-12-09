@@ -3,10 +3,19 @@ import React from "react";
 // chakra
 import { Button } from "@chakra-ui/react";
 
+// interface
+interface IPaginationItemProps {
+  numberPage: number;
+  isCurrent?: boolean;
+}
+
 //--------------------------
 // Export
 //--------------------------
-export const PaginationItem: React.FC<any> = ({ isCurrent = false, number }: any) => {
+export const PaginationItem: React.FC<any> = ({
+	isCurrent = false,
+	numberPage,
+}: IPaginationItemProps) => {
 	if (isCurrent) {
 		return (
 			<Button
@@ -17,7 +26,7 @@ export const PaginationItem: React.FC<any> = ({ isCurrent = false, number }: any
 				disabled
 				_disabled={{ colorbgColor: "pink.500", cursor: "default" }}
 			>
-				{number}
+				{numberPage}
 			</Button>
 		);
 	}
@@ -29,7 +38,7 @@ export const PaginationItem: React.FC<any> = ({ isCurrent = false, number }: any
 			bgColor="gray.700"
 			_hover={{ bg: "gray.500" }}
 		>
-			{number}
+			{numberPage}
 		</Button>
 	);
 };
