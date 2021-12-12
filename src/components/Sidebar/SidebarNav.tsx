@@ -1,7 +1,11 @@
 import React from "react";
+
+// chakra
 import {
 	Stack,
 } from "@chakra-ui/react";
+
+// icons
 import {
 	RiContactsLine,
 	RiDashboardLine,
@@ -9,9 +13,13 @@ import {
 	RiInputMethodLine,
 } from "react-icons/ri";
 
+// components
 import { NavSection } from "./NavSection";
 import { NavLink } from "./NavLink";
 
+//--------------------------
+// Export
+//--------------------------
 const SidebarNav: React.FC = () => {
 	return (
 		<Stack spacing="12" aling="flex-start">
