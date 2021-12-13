@@ -1,5 +1,8 @@
 import React from "react";
 
+// next
+import Link from "next/link"
+
 // chakra
 import {
 	Box,
@@ -45,16 +48,18 @@ const UserList = () => {
 						<Heading size="lg" fontWeight="normal">
 							Lista de Usuários
 						</Heading>
-						<Button
-							as="a"
-							size="sm"
-							fontSize="sm"
-							colorScheme="pink"
-							leftIcon={<Icon as={RiAddLine} fontSize="20" />}
-							href="/users/create"
-						>
-							Criar novo
-						</Button>
+						<Link href="/users/create" passHref>
+							<Button
+								as="a"
+								size="sm"
+								fontSize="sm"
+								colorScheme="pink"
+								leftIcon={<Icon as={RiAddLine} fontSize="20" />}
+								href="/users/create"
+							>
+								Criar novo
+							</Button>
+						</Link>
 					</Flex>
 
 					<Table colorScheme="whiteAlpha">
