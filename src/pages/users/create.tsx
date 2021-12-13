@@ -1,5 +1,8 @@
 import React from "react";
 
+// next
+import Link from "next/link";
+
 // chakra
 import {
 	Box,
@@ -42,13 +45,21 @@ const CreateUser = () => {
 
 						<SimpleGrid minChildWidth="240px" spacing={["6", "8"]} w="100%">
 							<Input name="password" label="Senha" type="password" />
-							<Input name="password_confirmation" label="Confirmar senha" type="password" />
+							<Input
+								name="password_confirmation"
+								label="Confirmar senha"
+								type="password"
+							/>
 						</SimpleGrid>
 					</VStack>
 
 					<Flex mt="8" justify="flex-end">
 						<HStack spacing="4">
-							<Button colorScheme="whiteAlpha">Voltar</Button>
+							<Link href="/users" passHref>
+								<Button colorScheme="whiteAlpha" as="a">
+									Cancelar
+								</Button>
+							</Link>
 							<Button colorScheme="pink">Salvar</Button>
 						</HStack>
 					</Flex>
