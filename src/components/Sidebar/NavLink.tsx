@@ -1,5 +1,8 @@
 import React, { ElementType } from "react";
 
+// next
+import Link from "next/link"
+
 // chakra
 import {
 	Text, Icon, Link as ChakraLink, LinkProps as ChakraLinkProps,
@@ -17,11 +20,13 @@ interface INavLinkProps extends ChakraLinkProps {
 //--------------------------
 export const NavLink = ({ children, icon, href }: INavLinkProps) => {
 	return (
-		<ChakraLink display="flex" aling="center" href={href}>
-			<Icon as={icon} fontSize="20" />
-			<Text ml="4" fontWeight="medium">
-				{children}
-			</Text>
-		</ChakraLink>
+		<Link href={href} passHref>
+			<ChakraLink display="flex" aling="center">
+				<Icon as={icon} fontSize="20" />
+				<Text ml="4" fontWeight="medium">
+					{children}
+				</Text>
+			</ChakraLink>
+		</Link>
 	);
 };

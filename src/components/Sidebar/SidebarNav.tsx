@@ -33,10 +33,10 @@ const SidebarNav: React.FC = () => {
 			</NavSection>
 
 			<NavSection title="AUTOMAÇÃO">
-				<NavLink icon={RiInputMethodLine} href="/form">
+				<NavLink icon={RiInputMethodLine} href="/forms">
 					Formulários
 				</NavLink>
-				<NavLink icon={RiGitMergeLine} href="/automatic">
+				<NavLink icon={RiGitMergeLine} href="/automation">
 					Automação
 				</NavLink>
 			</NavSection>
