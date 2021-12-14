@@ -2,6 +2,7 @@ import React, { cloneElement, ReactElement } from "react";
 
 // next
 import Link, { LinkProps } from "next/link"
+import { useRouter } from "next/router";
 
 // interface
 interface IActiveLinkProps extends LinkProps {
@@ -12,7 +13,17 @@ interface IActiveLinkProps extends LinkProps {
 // Export
 //--------------------------
 export const ActiveLink = ({ children, ...rest }: IActiveLinkProps) => {
-	const isActive = true
+	// hooks
+	const { asPath } = useRouter()
+	let isActive = false
+
+	if (asPath === rest.href || asPath === rest.as) {
+		isActive = true
+	}
+
+	//--------------------------
+	// Return
+	//--------------------------
 	return (
 		<Link {...rest}>
 			{cloneElement(children, {
