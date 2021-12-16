@@ -16,13 +16,19 @@ type SignInFormData = {
 // Export
 //--------------------------
 export default function Home() {
+	// hooks
 	const { register, handleSubmit, formState } = useForm();
 
+	// functions
 	const handleSignIn: SubmitHandler<SignInFormData> = async (values) => {
 		await new Promise((resolve) => setTimeout(() => {
 			console.log(values);
 		}, 2000))
 	};
+
+	//--------------------------
+	// Return
+	//--------------------------
 	return (
 		<Flex w="100vw" h="100vh" align="center" justify="center">
 			<Flex
