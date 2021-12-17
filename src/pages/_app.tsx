@@ -12,6 +12,14 @@ import { theme } from "../styles/theme";
 // context
 import { SidebarDrawerProvider } from "../contexts/SidebarDrawerContext";
 
+// mirage
+import { makeServer } from "../services/mirage";
+
+// start server mirage
+if (process.env.NODE_ENV === "development") {
+	makeServer()
+}
+
 //--------------------------
 // Export
 //--------------------------
