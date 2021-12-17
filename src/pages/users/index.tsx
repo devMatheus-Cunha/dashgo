@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // next
-import Link from "next/link"
+import Link from "next/link";
 
 // chakra
 import {
@@ -37,6 +37,12 @@ const UserList = () => {
 		base: false,
 		lg: true,
 	});
+
+	useEffect(() => {
+		fetch("http://localhost:3000/api/users")
+			.then((response) => response.json())
+			.then((response) => console.log(response));
+	}, []);
 	return (
 		<Box>
 			<Header />
@@ -94,9 +100,15 @@ const UserList = () => {
 										size="sm"
 										fontSize="sm"
 										colorScheme="purple"
-										leftIcon={isWideVersion && <Icon as={RiPencilLine} fontSize="16" />}
+										leftIcon={
+											isWideVersion && <Icon as={RiPencilLine} fontSize="16" />
+										}
 									>
-										{isWideVersion ?	"Editar " : <Icon as={RiPencilLine} fontSize="16" />}
+										{isWideVersion ? (
+											"Editar "
+										) : (
+											<Icon as={RiPencilLine} fontSize="16" />
+										)}
 									</Button>
 								</Td>
 							</Tr>
@@ -119,9 +131,15 @@ const UserList = () => {
 										size="sm"
 										fontSize="sm"
 										colorScheme="purple"
-										leftIcon={isWideVersion && <Icon as={RiPencilLine} fontSize="16" />}
+										leftIcon={
+											isWideVersion && <Icon as={RiPencilLine} fontSize="16" />
+										}
 									>
-										{isWideVersion ?	"Editar " : <Icon as={RiPencilLine} fontSize="16" />}
+										{isWideVersion ? (
+											"Editar "
+										) : (
+											<Icon as={RiPencilLine} fontSize="16" />
+										)}
 									</Button>
 								</Td>
 							</Tr>
@@ -144,9 +162,15 @@ const UserList = () => {
 										size="sm"
 										fontSize="sm"
 										colorScheme="purple"
-										leftIcon={isWideVersion && <Icon as={RiPencilLine} fontSize="16" />}
+										leftIcon={
+											isWideVersion && <Icon as={RiPencilLine} fontSize="16" />
+										}
 									>
-										{isWideVersion ?	"Editar " : <Icon as={RiPencilLine} fontSize="16" />}
+										{isWideVersion ? (
+											"Editar "
+										) : (
+											<Icon as={RiPencilLine} fontSize="16" />
+										)}
 									</Button>
 								</Td>
 							</Tr>
