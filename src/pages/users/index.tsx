@@ -33,16 +33,22 @@ import { Pagination } from "../../components/Pagination";
 // Export
 //--------------------------
 const UserList = () => {
+	// hooks
 	const isWideVersion = useBreakpointValue({
 		base: false,
 		lg: true,
 	});
 
+	// useEffects
 	useEffect(() => {
 		fetch("http://localhost:3000/api/users")
 			.then((response) => response.json())
 			.then((response) => console.log(response));
 	}, []);
+
+	//--------------------------
+	// Return
+	//--------------------------
 	return (
 		<Box>
 			<Header />
