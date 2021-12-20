@@ -29,6 +29,9 @@ import {
 // icons
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
 
+// api
+import { api } from "../../services/api";
+
 // components
 import { Header } from "../../components/Header";
 import { Sidebar } from "../../components/Sidebar";
@@ -41,8 +44,7 @@ const UserList = () => {
 	const {
 		data, isLoading, error, isFetching,
 	} = useQuery("users", async () => {
-		const resposne = await fetch("http://localhost:3000/api/users");
-		const data = await resposne.json();
+		const { data } = await api.get("/users");
 
 		const users = data?.users.map((user) => {
 			return {
@@ -119,7 +121,7 @@ const UserList = () => {
 								</Thead>
 
 								<Tbody>
-									{data.map((user) => (
+									{data?.map((user) => (
 										<>
 											<Tr key={user.id}>
 												<Td px={["4", "4", "6"]}>
