@@ -1,8 +1,5 @@
 import React from "react";
 
-// react query
-import { useQuery } from "react-query";
-
 // next
 import Link from "next/link";
 
@@ -28,9 +25,6 @@ import {
 // icons
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
 
-// api
-import { api } from "../../services/api";
-
 // hooks
 import { useUsers } from "../../services/hooks/useUsers";
 
@@ -43,11 +37,11 @@ import { Pagination } from "../../components/Pagination";
 // Export
 //--------------------------
 const UserList = () => {
+	// hooks
 	const {
 		data, isLoading, error, isFetching,
 	} = useUsers();
 
-	// hooks
 	const isWideVersion = useBreakpointValue({
 		base: false,
 		lg: true,

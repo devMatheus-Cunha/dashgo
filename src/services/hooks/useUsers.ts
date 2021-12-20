@@ -1,6 +1,12 @@
+// react query
 import { useQuery } from "react-query";
+
+// api
 import { api } from "../api";
 
+//--------------------------
+// Export
+//--------------------------
 export const useUsers = () => {
 	return useQuery("users", async () => {
 		const { data } = await api.get("/users");
