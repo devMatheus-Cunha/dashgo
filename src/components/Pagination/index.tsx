@@ -59,11 +59,11 @@ export const Pagination = ({
 				{" "}
 				-
 				{" "}
-				<strong>10</strong>
+				<strong>5</strong>
 				{" "}
-				-
+				de
 				{" "}
-				<strong>100</strong>
+				<strong>{totalCountOfRegisters}</strong>
 			</Box>
 			<Stack direction="row" spacing="2">
 				{currentPage > 1 + siblingsCount && (
@@ -105,7 +105,7 @@ export const Pagination = ({
 						);
 					})}
 
-				{currentPage + siblingsCount < lastPage && (
+				{currentPage + siblingsCount < lastPage && ( 
 					<>
 						{currentPage + 1 + siblingsCount < lastPage && (
 							<Text color="gray.300" width="8" textAlign="center">
