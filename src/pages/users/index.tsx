@@ -1,4 +1,3 @@
-/* eslint-disable no-nested-ternary */
 import React from "react";
 
 // react query
@@ -32,6 +31,9 @@ import { RiAddLine, RiPencilLine } from "react-icons/ri";
 // api
 import { api } from "../../services/api";
 
+// hooks
+import { useUsers } from "../../services/hooks/useUsers";
+
 // components
 import { Header } from "../../components/Header";
 import { Sidebar } from "../../components/Sidebar";
@@ -43,25 +45,7 @@ import { Pagination } from "../../components/Pagination";
 const UserList = () => {
 	const {
 		data, isLoading, error, isFetching,
-	} = useQuery("users", async () => {
-		const { data } = await api.get("/users");
-
-		const users = data?.users.map((user) => {
-			return {
-				id: user.id,
-				name: user.name,
-				email: user.email,
-				createdAt: new Date(user.createdAt).toLocaleDateString("pt-BR", {
-					day: "2-digit",
-					month: "long",
-					year: "numeric",
-				}),
-			};
-		});
-		return users;
-	}, {
-		staleTime: 1000 * 5, // 5 seconds
-	});
+	} = useUsers();
 
 	// hooks
 	const isWideVersion = useBreakpointValue({
@@ -82,7 +66,9 @@ const UserList = () => {
 					<Flex mb="8" justify="space-between" align="center">
 						<Heading size="lg" fontWeight="normal">
 							Usuários
-							{!isLoading && isFetching && <Spinner size="sm" color="gray.500" ml="4" />}
+							{!isLoading && isFetching && (
+								<Spinner size="sm" color="gray.500" ml="4" />
+							)}
 						</Heading>
 						<Link href="/users/create" passHref>
 							<Button
