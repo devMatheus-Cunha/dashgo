@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // next
 import Link from "next/link";
@@ -37,10 +37,16 @@ import { Pagination } from "../../components/Pagination";
 // Export
 //--------------------------
 const UserList = () => {
+	// states
+	const [page, setPage] = useState(1);
+
 	// hooks
 	const {
-		data, isLoading, error, isFetching,
-	} = useUsers();
+		data,
+		isLoading,
+		error,
+		isFetching,
+	} = useUsers(page);
 
 	const isWideVersion = useBreakpointValue({
 		base: false,
@@ -101,7 +107,7 @@ const UserList = () => {
 								</Thead>
 
 								<Tbody>
-									{data?.map((user) => (
+									{data?.users?.map((user) => (
 										<>
 											<Tr key={user.id}>
 												<Td px={["4", "4", "6"]}>
@@ -115,7 +121,7 @@ const UserList = () => {
 														</Text>
 													</Box>
 												</Td>
-												{isWideVersion && <Td>{user.createdAt}</Td>}
+												{isWideVersion && <Td>{user.created_at}</Td>}
 												<Td>
 													<Button
 														as="a"
