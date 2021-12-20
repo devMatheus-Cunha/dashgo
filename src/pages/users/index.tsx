@@ -33,6 +33,14 @@ import { Header } from "../../components/Header";
 import { Sidebar } from "../../components/Sidebar";
 import { Pagination } from "../../components/Pagination";
 
+// types
+type DataUsers = {
+	id: string
+	name: string
+	email: string
+	createdAt: string,
+}
+
 //--------------------------
 // Export
 //--------------------------
@@ -101,7 +109,7 @@ const UserList = () => {
 								</Thead>
 
 								<Tbody>
-									{data?.map((user) => (
+									{data?.map((user: DataUsers) => (
 										<>
 											<Tr key={user.id}>
 												<Td px={["4", "4", "6"]}>
