@@ -38,14 +38,11 @@ import { Pagination } from "../../components/Pagination";
 //--------------------------
 const UserList = () => {
 	// states
-	const [page, setPage] = useState(1);
+	const [page, setPage] = useState<number>(1);
 
 	// hooks
 	const {
-		data,
-		isLoading,
-		error,
-		isFetching,
+		data, isLoading, error, isFetching,
 	} = useUsers(page);
 
 	const isWideVersion = useBreakpointValue({
@@ -147,7 +144,11 @@ const UserList = () => {
 								</Tbody>
 							</Table>
 
-							<Pagination />
+							<Pagination
+							 totalCountOfRegisters={data.totalCount}
+							 currentPage={page}
+							 onPageChange={setPage}
+							/>
 						</>
 					)}
 				</Box>
