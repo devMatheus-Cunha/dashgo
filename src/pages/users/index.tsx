@@ -38,7 +38,9 @@ import { Pagination } from "../../components/Pagination";
 // Export
 //--------------------------
 const UserList = () => {
-	const { data, isLoading, error } = useQuery("users", async () => {
+	const {
+		data, isLoading, error, isFetching,
+	} = useQuery("users", async () => {
 		const resposne = await fetch("http://localhost:3000/api/users");
 		const data = await resposne.json();
 
@@ -77,7 +79,8 @@ const UserList = () => {
 				<Box flex="1" bg="gray.800" borderRadius={8} p="8">
 					<Flex mb="8" justify="space-between" align="center">
 						<Heading size="lg" fontWeight="normal">
-							Lista de Usuários
+							Usuários
+							{!isLoading && isFetching && <Spinner size="sm" color="gray.500" ml="4" />}
 						</Heading>
 						<Link href="/users/create" passHref>
 							<Button
