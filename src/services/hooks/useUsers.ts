@@ -5,18 +5,20 @@ import { useQuery } from "react-query";
 import { api } from "../api";
 
 // types
-type GetUsers = {
+type Users = {
 	id: string
 	name: string
 	email: string
 	createdAt: string,
 }
 
-// getUsers
-async function getUsers() {
+//--------------------------
+// Export Get Data Users
+//--------------------------
+export async function getUsers(): Promise<Users[]> {
 	const { data } = await api.get("/users");
 
-	const users = data?.users.map((user: GetUsers) => {
+	const users = data?.users.map((user: Users) => {
 		return {
 			id: user.id,
 			name: user.name,
@@ -32,7 +34,7 @@ async function getUsers() {
 }
 
 //--------------------------
-// Export
+// Export Hook
 //--------------------------
 export const useUsers = () => {
 	return useQuery("users", getUsers, {
